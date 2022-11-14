@@ -9,33 +9,36 @@
     --bg: rgb(223, 164, 146);
 }
 
-body {
-    font-size: 2rem;
-}
-
 .container {
     display: grid;
 }
 
-.container div {
+/* .container div {
     border: 1px red dashed;
-}
+} */
 
 .content {
     background: var(--bg);
     display: grid;
     grid-template-columns: repeat(2, 1fr);  
+    color: var(--headerfooter);
+    align-items: center;
+
 }
 
 .content div {
     border: 1px blue dashed;
 }
 
+.contentheader {
+    margin-bottom: 2rem;
+}
+
 .header {
     height: 10vh;
     min-height: 100px;
     background-color: var(--headerfooter);
-    color: rgb(228, 179, 165);
+    color: var(--headfoottext);
     display: flex;
     justify-content: space-between;
 }
@@ -64,6 +67,10 @@ body {
 
 .footer {
     background-color: var(--headerfooter);
+    color: var(--headfoottext);
+
+    display: flex;
+    justify-content: center;
 }
 
 a {
@@ -72,4 +79,6 @@ a {
 
 a:hover {
     cursor: pointer;
+    background-color: rgba(255, 224, 214, 0.185);
+    border-radius: 5px;
 }
