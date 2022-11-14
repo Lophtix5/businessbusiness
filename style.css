@@ -1,4 +1,75 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --headerfooter: rgb(34, 26, 39); 
+    --headfoottext: rgb(228, 179, 165);
+    --bg: rgb(223, 164, 146);
+}
+
+body {
     font-size: 2rem;
-    background: red;
+}
+
+.container {
+    display: grid;
+}
+
+.container div {
+    border: 1px red dashed;
+}
+
+.content {
+    background: var(--bg);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+}
+
+.content div {
+    border: 1px blue dashed;
+}
+
+.header {
+    height: 10vh;
+    min-height: 100px;
+    background-color: var(--headerfooter);
+    color: rgb(228, 179, 165);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navlinks a {
+    margin: 0rem 2rem;
+}
+
+.landing {
+    background: url(./hero.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.footer {
+    background-color: var(--headerfooter);
+}
+
+a {
+    all:inherit;
+}
+
+a:hover {
+    cursor: pointer;
 }
