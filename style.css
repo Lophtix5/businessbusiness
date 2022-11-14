@@ -1,11 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 :root {
     --headerfooter: rgb(34, 26, 39); 
     --headfoottext: rgb(228, 179, 165);
+    --headfoottexthover: rgb(226, 200, 193);
     --bg: rgb(223, 164, 146);
 }
 
@@ -13,27 +15,7 @@
     display: grid;
 }
 
-/* .container div {
-    border: 1px red dashed;
-} */
-
-.content {
-    background: var(--bg);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);  
-    color: var(--headerfooter);
-    align-items: center;
-
-}
-
-.content div {
-    border: 1px blue dashed;
-}
-
-.contentheader {
-    margin-bottom: 2rem;
-}
-
+/* Header */
 .header {
     height: 10vh;
     min-height: 100px;
@@ -49,30 +31,96 @@
     justify-content: space-around;
 }
 
+.logos:hover {
+    color: var(--headfoottexthover);
+    cursor: pointer;
+}
+
 .navlinks {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
+.navlinks:hover {
+    color: var(--headfoottexthover);
+}
+
 .navlinks a {
     margin: 0rem 2rem;
 }
 
+/* Landing */
 .landing {
     background: url(./hero.jpg);
     background-size: cover;
     height: 100vh;
+    color: rgb(211, 234, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.footer {
-    background-color: var(--headerfooter);
-    color: var(--headfoottext);
+.topgradient {
+    height: 50px;
+    width: 100vw;
+    background-image: linear-gradient(var(--headerfooter), rgba(34, 26, 39, 0.4), rgba(34, 26, 39, 0));
+}
 
+.bottomgradient {
+    height: 50px;
+    width: 100vw;
+    background-image: linear-gradient(rgba(223, 164, 146, 0), rgba(223, 164, 146, 0.4), var(--bg) );
+}
+
+.landingtext {
     display: flex;
     justify-content: center;
 }
 
+.landingtext:hover {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+/* Content */
+.content {
+    background: var(--bg);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    color: var(--headerfooter);
+    align-items: center;
+}
+
+.contentheader {
+    margin-bottom: 2rem;
+}
+
+.contenttext {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    margin: 2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--headerfooter);
+    color: var(--headfoottext);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    min-height: 50px;
+}
+
+/* Länkar */
 a {
     all:inherit;
 }
